@@ -5,6 +5,7 @@ from google import genai
 import os
 from dotenv import load_dotenv
 import random
+import time
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -49,11 +50,11 @@ Mavzu: {topic}
     print(f"{retries} martadan keyin ham javob olmadi 🚨")
     return None
 
+
 def sending_post():
     print("I am starting")
-    for _ in range(3):
+    for attempt in range(1, 4):
         post_text = ai_response(choosing_topic())
-        
         post_text = post_text.replace("<br>", "\n\n")
 
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
@@ -62,16 +63,24 @@ def sending_post():
             "text": post_text,
             "parse_mode": "HTML"
         }
-        r = requests.post(url, data=payload)      
-        try:
-            if r.status_code == 400:
-                pass
-            else:
-                break            
-        except Exception as e:
-            print("Javobni o'qib bo'lmadi:", e)
 
-    
+        try:
+            r = requests.post(url, data=payload)
+            r.raise_for_status()  
+            print("Post sent successfully!")
+            break  
+
+        except requests.exceptions.HTTPError as e:
+            if r.status_code == 400:
+                print(f"Skipped invalid request: {e}")
+                break 
+            else:
+                print(f"HTTP error on attempt {attempt}: {e}")
+        except requests.exceptions.RequestException as e:
+            print(f"Network error on attempt {attempt}: {e}")
+
+        time.sleep(2)  
+
 
 
 
