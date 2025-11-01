@@ -20,21 +20,29 @@ def choosing_topic():
     return topic
 
 def ai_response(topic, retries=3):
-    promt = f"""
-Siz professional kontent yaratuvchisisiz. Sizning vazifangiz — quyidagi {topic} asosida Telegram uchun <b>o'zbek tilida</b>, HTML parse yordamida (<b>, <i>, <u>, <code>, <pre>, <a>) chiroyli, tushunarli va qiziqarli post yaratish. Post shunday bo‘lsinki:
+    prompt = f"""
+Siz professional kontent yaratuvchisisiz. Sizning vazifangiz — quyidagi <b>{topic}</b> mavzusi asosida Telegram uchun <b>o'zbek tilida</b> HTML parse formatida (<b>, <i>, <u>, <code>, <pre>, <a>) chiroyli, o‘qilishi yoqimli va hammaga tushunarli post yaratish.
 
-- O‘quvchi har qanday darajada bo‘lishidan qat’i nazar, mavzuni tushunadi.
-- Post interaktiv, hazil-mutoyiba yoki qiziqarli faktlar bilan boyitilgan bo‘lishi mumkin.
-- Emoji’lar <b>faqat ohirida emas</b>, gaplarga mos ravishda kreativ ishlatilishi mumkin.
-- Uzunligi mavzu hajmiga qarab moslashadi; 4-6 jumla majburiy emas.
-- Postni o‘quvchi sevib o‘qishi va oson tushunishi kerak.
-- Faqat post matnini chiqarish, tushuntirish yoki qo‘shimcha izoh yozmang.
-- Telegram kanal linki <b><a href='https://telegram.com/asliddin_tursunoffpy'>asliddin_tursunoff.py</a></b>
-- Telegram kanal linkini qushish majburiy emas obuna bo'ling degan gaplar ham yozilmasin! agarda link kerak bo'lib qolsa ishlat
-- Hech qanday salom obunachilar va qani ketdik qani boshladik va shunga o'xshash narsalarni yozilmasin!
+📋 Post yozish qoidalari:
+- Post <b>qiziqarli, kreativ va tabiiy ohangda</b> yozilsin.
+- Har qanday darajadagi o‘quvchi mavzuni tushuna olsin — texnik atamalar oddiy tilda izohlangan bo‘lsin.
+- Post <b>diqqatni tortadigan yoki hazil-mutoyiba, hayotiy misol, yoki noodatiy fakt</b> bilan boshlansin.
+- Emoji’lar <b>faqat ohirida emas</b>, balki joyida, matnga mos holda ishlatilsin 😊🔥💡
+- Uzunlik mavzuga qarab moslashadi (majburiy 4–6 jumla emas), ammo o‘qishda zeriktirmasligi kerak.
+- Matnda o‘quvchini "siz", "sen" kabi so‘zlar bilan bevosita jalb etish mumkin.
+- Post yakunida hech qanday “obuna bo‘ling”, “do‘stlaringizga ulashing” yoki shunga o‘xshash chaqiriqlar bo‘lmasin.
+- Istalgan joyda quyidagi havoladan foydalanish mumkin, lekin majburiy emas:  
+  <b><a href='https://telegram.com/asliddin_tursunoffpy'>asliddin_tursunoff.py</a></b>
 
-Mavzu: {topic}
+🚫 Quyidagilar yozilmasin:
+- “Salom obunachilar”, “Keling boshladik”, “Qani ketdik” va shunga o‘xshash kirish gaplar.
+- Qo‘shimcha tushuntirish, prompt izohi yoki texnik izohlar.
+
+🎯 Maqsad: O‘quvchi postni bir o‘qishda tushunsin, zavqlansin va unda qiziqish uyg‘onsin.
+
+Mavzu: <b>{topic}</b>
 """
+
     for attempt in range(1, retries + 1):
         try:
             response = client.models.generate_content(
