@@ -48,7 +48,7 @@ Maqsad — foydalanuvchi postni bir o‘qishda tushunsin, kulib qo‘ysin va “
     for attempt in range(1, retries + 1):
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-2.5-pro",
                 contents=promt
             )
             if hasattr(response, "text") and response.text:
