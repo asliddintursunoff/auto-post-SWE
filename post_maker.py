@@ -21,27 +21,24 @@ def choosing_topic():
 
 def ai_response(topic, retries=3):
     promt = f"""
-Siz professional kontent yaratuvchisisiz. Sizning vazifangiz — quyidagi <b>{topic}</b> mavzusi asosida Telegram uchun <b>o'zbek tilida</b> HTML parse formatida (<b>, <i>, <u>, <code>, <pre>, <a>) chiroyli, o‘qilishi yoqimli va hammaga tushunarli post yaratish.
+Siz professional kontent yaratuvchisiz. Sizga <b>{topic}</b> mavzusida <b>o‘zbek tilida</b> yozilgan, Telegram uchun HTML formatda (<b>, <i>, <u>, <a>, <code>, <pre>) chiroyli va o‘qilishi yoqimli post yaratish topshirig‘i berilgan.
 
-📋 Post yozish qoidalari:
-- Post <b>qiziqarli, kreativ va tabiiy ohangda</b> yozilsin.
-- Har qanday darajadagi o‘quvchi mavzuni tushuna olsin — texnik atamalar oddiy tilda izohlangan bo‘lsin.
-- Post <b>diqqatni tortadigan yoki hazil-mutoyiba, hayotiy misol, yoki noodatiy fakt</b> bilan boshlansin.
-- Emoji’lar <b>faqat ohirida emas</b>, balki joyida, matnga mos holda ishlatilsin 😊🔥💡
-- Uzunlik mavzuga qarab moslashadi (majburiy 4–6 jumla emas), ammo o‘qishda zeriktirmasligi kerak.
-- Matnda o‘quvchini "siz", "sen" kabi so‘zlar bilan bevosita jalb etish mumkin.
-- Post yakunida hech qanday “obuna bo‘ling”, “do‘stlaringizga ulashing” yoki shunga o‘xshash chaqiriqlar bo‘lmasin.
-- Istalgan joyda quyidagi havoladan foydalanish mumkin, lekin majburiy emas:  
-  <b><a href='https://telegram.com/asliddin_tursunoffpy'>asliddin_tursunoff.py</a></b>
+🎯 Talablar:
+- Post <b>qisqa (4–8 gap)</b>, <b>qiziqarli</b> va <b>kreativ ohangda</b> bo‘lsin.
+- Texnik mavzular oddiy tilda tushuntirilsin, misollar hayotiy bo‘lsin.
+- Kirishda diqqatni tortadigan fakt, hazil yoki taqqoslash ishlatilsin.
+- Emoji’lar joyida, ma’noga mos qo‘llansin (masalan: 💡🔥😅).
+- Oxirida "obuna bo‘ling", "ulashing" kabi chaqiriqlar bo‘lmasin.
+- Quyidagi havolani <i>ixtiyoriy</i> tarzda ishlatish mumkin: 
+  <a href='https://t.me/asliddin_tursunoffpy'>asliddin_tursunoff.py</a>
 
-🚫 Quyidagilar yozilmasin:
-- “Salom obunachilar”, “Keling boshladik”, “Qani ketdik” va shunga o‘xshash kirish gaplar.
-- Qo‘shimcha tushuntirish, prompt izohi yoki texnik izohlar.
+❌ Yozilmasin:
+- “Salom obunachilar”, “Keling boshladik”, “Qani ketdik” kabi so‘zlar.
+- Juda uzun izohlar yoki darslik ohangida gaplar.
 
-🎯 Maqsad: O‘quvchi postni bir o‘qishda tushunsin, zavqlansin va unda qiziqish uyg‘onsin.
-
-Mavzu: <b>{topic}</b>
+Postni tabiiy, inson yozgandek uslubda yozing.
 """
+
 
     for attempt in range(1, retries + 1):
         try:
