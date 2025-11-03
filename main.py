@@ -26,9 +26,10 @@ def scheduling_post_times():
     schedule.every().day.at(get_local_time_str(14)).do(sending_post).tag('daily_posts')
     schedule.every().day.at(get_local_time_str(20)).do(sending_post).tag('daily_posts')
 
-schedule.every().day.at("06:50").do(scheduling_post_times)
+schedule.every().day.at("00:50").do(scheduling_post_times)
 print("hello I am starting")
 print(datetime.now())
+sending_post()
 while True:
     schedule.run_pending()
     time.sleep(30)
