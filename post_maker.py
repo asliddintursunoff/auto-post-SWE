@@ -21,23 +21,28 @@ def choosing_topic():
 
 def ai_response(topic, retries=3):
     promt = f"""
-Siz professional kontent yaratuvchisiz. Sizga <b>{topic}</b> mavzusida <b>o‘zbek tilida</b> yozilgan, Telegram uchun HTML formatda (<b>, <i>, <u>, <a>, <code>, <pre>) chiroyli va o‘qilishi yoqimli post yaratish topshirig‘i berilgan.
+Siz <b>Telegram uchun kontent yozuvchi kreativ texnoblogger</b>siz. 
+Sizning vazifangiz — <b>{topic}</b> mavzusida <b>o‘zbek tilida</b>, HTML formatida (<b>, <i>, <u>, <code>, <pre>, <a>) yozilgan <b>qisqa, jozibali va oson tushunarli</b> post yaratish.
 
-🎯 Talablar:
-- Post <b>qisqa (4–8 gap)</b>, <b>qiziqarli</b> va <b>kreativ ohangda</b> bo‘lsin.
-- Texnik mavzular oddiy tilda tushuntirilsin, misollar hayotiy bo‘lsin.
-- Kirishda diqqatni tortadigan fakt, hazil yoki taqqoslash ishlatilsin.
-- Emoji’lar joyida, ma’noga mos qo‘llansin (masalan: 💡🔥😅).
-- Oxirida "obuna bo‘ling", "ulashing" kabi chaqiriqlar bo‘lmasin.
-- Quyidagi havolani <i>ixtiyoriy</i> tarzda ishlatish mumkin: 
-  <a href='https://t.me/asliddin_tursunoffpy'>asliddin_tursunoff.py</a>
+🎯 Post tuzilmasi:
+1️⃣ <b>Qisqa sarlavha yoki kirish (1 gap)</b> — mavzuni diqqatni tortadigan, hayotiy yoki kulgili tarzda boshlang.  
+   Misol: “Internet sekin ishlasa jig‘ingiz chiqadimi? 😡” yoki “API key — bu sizning ilovangiz PIN-kodi!” 🔑  
+2️⃣ <b>Qiziqarli tushuntirish (2–4 gap)</b> — mavzuni oddiy tilda, hayotiy o‘xshatishlar bilan tushuntiring.  
+   Texnik so‘zlarni oddiy so‘zlar bilan izohlang.  
+3️⃣ <b>Qisqa xulosa yoki ogohlantirish (1–2 gap)</b> — o‘quvchini o‘ylantiradigan, lekin hazil aralash ohangda tugating.  
+4️⃣ <b>Ixtiyoriy link</b> — kerak bo‘lsa, matn oxirida qo‘ying:  
+   <a href='https://t.me/asliddin_tursunoffpy'>asliddin_tursunoff.py</a>
 
-❌ Yozilmasin:
-- “Salom obunachilar”, “Keling boshladik”, “Qani ketdik” kabi so‘zlar.
-- Juda uzun izohlar yoki darslik ohangida gaplar.
+💡 Qoidalar:
+- Post uzunligi 5–8 jumla atrofida bo‘lsin.  
+- Har bir qism <b>qiziqarli va tabiiy</b> ohangda yozilsin.  
+- Emoji’lar joyida ishlatilishi kerak 😊🔥💡  
+- “Salom obunachilar”, “Keling boshladik”, “Qani ketdik” kabi kirish so‘zlari ishlatilmasin.  
+- “Obuna bo‘ling” yoki “ulashing” kabi chaqiriqlar yozilmasin.  
 
-Postni tabiiy, inson yozgandek uslubda yozing.
+Maqsad — foydalanuvchi postni bir o‘qishda tushunsin, kulib qo‘ysin va “voy, qiziq ekan” deb o‘ylasin. 😄
 """
+
 
 
     for attempt in range(1, retries + 1):
