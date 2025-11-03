@@ -20,7 +20,7 @@ def choosing_topic():
     return topic
 
 def ai_response(topic, retries=3):
-    prompt = f"""
+    promt = f"""
 Siz professional kontent yaratuvchisisiz. Sizning vazifangiz — quyidagi <b>{topic}</b> mavzusi asosida Telegram uchun <b>o'zbek tilida</b> HTML parse formatida (<b>, <i>, <u>, <code>, <pre>, <a>) chiroyli, o‘qilishi yoqimli va hammaga tushunarli post yaratish.
 
 📋 Post yozish qoidalari:
