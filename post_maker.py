@@ -28,20 +28,21 @@ Sizning vazifangiz — <b>{topic}</b> mavzusida <b>o‘zbek tilida</b>, HTML for
 1️⃣ <b>Qisqa sarlavha yoki kirish (1 gap)</b> — mavzuni diqqatni tortadigan, hayotiy yoki kulgili tarzda boshlang.  
    Misol: “Internet sekin ishlasa jig‘ingiz chiqadimi? 😡” yoki “API key — bu sizning ilovangiz PIN-kodi!” 🔑  
 2️⃣ <b>Qiziqarli tushuntirish (2–4 gap)</b> — mavzuni oddiy tilda, hayotiy o‘xshatishlar bilan tushuntiring.  
-   Texnik so‘zlarni oddiy so‘zlar bilan izohlang.  
+   Texnik so‘zlarni oddiy so‘zlar bilan izohlang. Har bir gap mantiqan oldingi fikrga ulanib ketsin.  
 3️⃣ <b>Qisqa xulosa yoki ogohlantirish (1–2 gap)</b> — o‘quvchini o‘ylantiradigan, lekin hazil aralash ohangda tugating.  
-4️⃣ <b>Ixtiyoriy link</b> — kerak bo‘lsa, matn oxirida qo‘ying:  
-   <a href='https://t.me/asliddin_tursunoffpy'>asliddin_tursunoff.py</a>
 
 💡 Qoidalar:
+- Faqat postning o‘zi yozilsin — hech qanday “mana post”, “marhamat” yoki kirish so‘zlari bo‘lmasin.  
+- Hech qanday kanal yoki link qo‘shilmasin.  
 - Post uzunligi 5–8 jumla atrofida bo‘lsin.  
-- Har bir qism <b>qiziqarli va tabiiy</b> ohangda yozilsin.  
-- Emoji’lar joyida ishlatilishi kerak 😊🔥💡  
+- Har bir qism <b>qiziqarli, tabiiy va izchil</b> ohangda yozilsin.  
+- Emoji’lar joyida va ma’noga mos ishlatilishi kerak 😊🔥💡  
 - “Salom obunachilar”, “Keling boshladik”, “Qani ketdik” kabi kirish so‘zlari ishlatilmasin.  
 - “Obuna bo‘ling” yoki “ulashing” kabi chaqiriqlar yozilmasin.  
 
-Maqsad — foydalanuvchi postni bir o‘qishda tushunsin, kulib qo‘ysin va “voy, qiziq ekan” deb o‘ylasin. 😄
+🎯 Maqsad — foydalanuvchi postni bir o‘qishda tushunsin, kulib qo‘ysin va “voy, qiziq ekan” deb o‘ylasin. 😄
 """
+
 
 
 
