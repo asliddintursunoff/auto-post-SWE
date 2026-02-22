@@ -66,6 +66,8 @@ def sending_post():
     print("I am starting")
     for attempt in range(1, 4):
         post_text = ai_response(choosing_topic())
+        if post_text is None:
+            continue
         post_text = post_text.replace("<br>", "\n\n")
 
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
